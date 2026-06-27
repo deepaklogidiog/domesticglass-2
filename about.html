@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Windows and Doors - Domestic Glass</title>
+<title>About Us – Domestic Glass</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -16,12 +16,11 @@ html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-heig
 .eyebrow-w{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.45);}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;cursor:pointer;border:none;}
 .btn-blk{background:var(--black);color:var(--white);}.btn-blk:hover{background:var(--teal);}
-.btn-teal{background:var(--teal);color:var(--white);}.btn-teal:hover{background:var(--teal-d);}
+/* HEADER */
 #hdr{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--g200);transition:box-shadow .3s;}
 #hdr.sc{box-shadow:0 4px 24px rgba(0,0,0,.07);}
 .nav{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.logo img{height:40px;width:auto;display:block;}
-.logo-fb{font-family:var(--fd);font-size:18px;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
+.logo img{height:40px;width:auto;}.logo-fb{font-family:var(--fd);font-size:18px;color:var(--black);display:none;}.logo-fb span{color:var(--teal);}
 .nl{display:flex;align-items:center;list-style:none;}
 .nl>li>a{font-size:12.5px;font-weight:500;letter-spacing:.04em;color:var(--g600);padding:8px 14px;display:flex;align-items:center;gap:4px;transition:color .2s;}
 .nl>li>a:hover,.nl>li.act>a{color:var(--black);}
@@ -36,48 +35,47 @@ html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-heig
 .hbg.op span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}.hbg.op span:nth-child(2){opacity:0;}.hbg.op span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
 .mob{display:none;flex-direction:column;background:var(--white);border-top:1px solid var(--g200);padding:16px 24px 24px;}
 .mob.op{display:flex;}.mob a{font-size:15px;color:var(--g800);padding:13px 0;border-bottom:1px solid var(--g100);transition:color .2s;}.mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
-.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;}
-.ph{padding:148px 0 0;background:var(--black);position:relative;overflow:hidden;}
+.mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;letter-spacing:.06em;font-size:11px!important;text-transform:uppercase;}
+/* PAGE HERO */
+.ph{padding:148px 0 88px;background:var(--black);position:relative;overflow:hidden;}
 .ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.ph-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:stretch;}
-.ph-left{padding-bottom:80px;}
-.ph h1{font-family:var(--fd);font-size:clamp(42px,5vw,76px);font-weight:300;line-height:1.05;color:var(--white);margin:18px 0 24px;}
+.ph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
+.phi{position:relative;z-index:1;}
+.ph h1{font-family:var(--fd);font-size:clamp(44px,5.5vw,80px);font-weight:300;line-height:1.05;color:var(--white);margin:18px 0 24px;}
 .ph h1 em{font-style:italic;color:var(--teal);}
-.ph-left p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.48);margin-bottom:32px;}
-.apps-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);padding:28px 24px;margin-top:36px;}
-.apps-box h3{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px;}
-.apps{display:flex;flex-wrap:wrap;gap:8px;}
-.app-tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);padding:6px 14px;font-size:12px;color:rgba(255,255,255,.58);}
-.ph-img{position:relative;overflow:hidden;min-height:400px;}
-.ph-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.ph-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.25) 0%,transparent 60%);}
-.ph-teal{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);z-index:2;}
-.challenges{padding:96px 0;background:var(--g50);}
-.challenges h2{font-family:var(--fd);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--black);margin:14px 0 48px;}
-.cg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--g200);}
-.ci{padding:36px 28px;border-right:1px solid var(--g200);position:relative;overflow:hidden;transition:background .2s;}
-.ci:last-child{border-right:none;}.ci:hover{background:var(--white);}
-.ci::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
-.ci:hover::before{transform:scaleX(1);}
-.ci h3{font-family:var(--fd);font-size:20px;font-weight:400;color:var(--black);margin-bottom:10px;}
-.ci p{font-size:13px;line-height:1.65;color:var(--g600);}
-.benefits{padding:96px 0;background:var(--white);}
-.bg2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.bl h2{font-family:var(--fd);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--black);margin:14px 0 28px;}
-.bis{display:flex;flex-direction:column;}
-.bi{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--g100);}
-.bi:first-child{padding-top:0;}.bi:last-child{padding-bottom:0;border-bottom:none;}
-.bdot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;}
-.bi span{font-size:14px;color:var(--g600);}
-.bimg{position:relative;overflow:hidden;}
-.bimg img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5;}
-.bimg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
-.scta{background:var(--teal);padding:80px 0;}
-.scta-i{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
-.scta h2{font-family:var(--fd);font-size:clamp(26px,3.5vw,46px);font-weight:300;color:var(--white);margin-bottom:8px;}
-.scta p{font-size:15px;color:rgba(255,255,255,.62);}
-.btn-ws{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--teal);font-family:var(--fb);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;transition:all .22s;}
-.btn-ws:hover{background:var(--black);color:var(--white);}
+.ph p{font-size:16px;line-height:1.75;color:rgba(255,255,255,.48);max-width:520px;}
+/* ABOUT INTRO */
+.ai{padding:100px 0;background:var(--white);}
+.ai-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.ai-left h2{font-family:var(--fd);font-size:clamp(30px,3.5vw,46px);font-weight:300;line-height:1.15;color:var(--black);margin:14px 0 22px;}
+.ai-left p{font-size:15px;line-height:1.8;color:var(--g600);margin-bottom:16px;}
+.ai-img{position:relative;overflow:hidden;}
+.ai-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5;}
+.ai-img-cap{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 100%);}
+.ai-img-cap span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75);}
+/* APPROACH */
+.approach{padding:100px 0;background:var(--g50);}
+.approach h2{font-family:var(--fd);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--black);margin:14px 0 52px;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--g200);}
+.step{padding:36px 28px;border-right:1px solid var(--g200);position:relative;overflow:hidden;transition:background .2s;}
+.step:last-child{border-right:none;}.step:hover{background:var(--white);}
+.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.step:hover::before{transform:scaleX(1);}
+.sn{font-family:var(--fd);font-size:34px;font-weight:300;color:var(--g200);line-height:1;margin-bottom:22px;}
+.step h3{font-family:var(--fd);font-size:20px;font-weight:400;color:var(--black);margin-bottom:10px;}
+.step p{font-size:13px;line-height:1.65;color:var(--g600);}
+/* PROMISE */
+.promise{padding:100px 0;background:var(--black);}
+.promise-i{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.promise-left h2{font-family:var(--fd);font-size:clamp(30px,3.5vw,46px);font-weight:300;color:var(--white);margin:14px 0 22px;}
+.promise-left p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.42);max-width:360px;}
+.pis{display:flex;flex-direction:column;}
+.pi{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.pi:first-child{padding-top:0;}.pi:last-child{padding-bottom:0;border-bottom:none;}
+.pidot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:7px;}
+.pi-text strong{display:block;font-size:14px;color:var(--white);margin-bottom:3px;}
+.pi-text span{font-size:13px;color:rgba(255,255,255,.42);line-height:1.5;}
+/* FOOTER */
 #ft{background:var(--black);padding:72px 0 0;}
 .ftg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.07);}
 .fli{height:38px;width:auto;display:block;margin-bottom:18px;opacity:.85;}
@@ -88,117 +86,90 @@ html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-heig
 .fbb{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
 .fbcp{font-size:11px;color:rgba(255,255,255,.18);}
 .fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
-@media(max-width:1024px){.ph-inner{grid-template-columns:1fr;}.bg2{grid-template-columns:1fr;gap:44px;}.cg{grid-template-columns:1fr 1fr;}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk,.nph{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.scta-i{flex-direction:column;align-items:flex-start;}}
-@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.cg{grid-template-columns:1fr;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.challenges,.benefits,.scta{padding:64px 0;}}
+@media(max-width:1024px){.ai-g{grid-template-columns:1fr;gap:48px;}.promise-i{grid-template-columns:1fr;gap:48px;}.steps{grid-template-columns:repeat(2,1fr);}.step{border-bottom:1px solid var(--g200);}.ftg{grid-template-columns:1fr 1fr;}}
+@media(max-width:900px){.nl,.nr .btn-blk,.nph{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}}
+@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.steps{grid-template-columns:1fr;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}.ai,.approach,.promise{padding:72px 0;}}
 </style>
 </head>
 <body>
 <header id="hdr">
   <div class="nav">
-    <a href="index.html" class="logo">
-      <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span class="logo-fb">Domestic <span>Glass</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">Domestic <span>Glass</span></span></a>
     <ul class="nl">
       <li><a href="index.html">Home</a></li>
-      <li class="drop act"><a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
-        <ul class="dd">
-          <li><a href="windows-doors.html">Windows and Doors</a></li>
-          <li><a href="railings.html">Railings</a></li>
-          <li><a href="partitions.html">Partitions and Doors</a></li>
-          <li><a href="shower-cubicles.html">Shower Cubicles</a></li>
-          <li><a href="mirrors.html">Mirrors</a></li>
-        </ul>
-      </li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="architects.html">Architects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li class="drop"><a href="#">Solutions <svg width="10" height="10" fill="none" viewBox="0 0 10 10"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a><ul class="dd"><li><a href="windows-doors.html">Windows and Doors</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li></ul></li>
+      <li><a href="projects.html">Projects</a></li><li class="act"><a href="about.html">About Us</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nr">
-      
-      <a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a>
-    </div>
+    <div class="nr"><a href="contact.html" class="btn btn-blk" style="padding:9px 18px;font-size:11px;">Book a Visit</a></div>
     <button class="hbg" id="hbg"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mob" id="mob">
-    <a href="index.html">Home</a>
-    <a href="windows-doors.html">Windows and Doors</a><a href="railings.html">Railings</a>
-    <a href="partitions.html">Partitions and Doors</a><a href="shower-cubicles.html">Shower Cubicles</a>
-    <a href="mirrors.html">Mirrors</a><a href="projects.html">Projects</a>
-    <a href="about.html">About Us</a><a href="architects.html">Architects</a>
-    <a href="contact.html">Contact</a><a href="tel:+919999999999">+91 98765 43210</a>
-    <a href="contact.html" class="mob-cta">Book a Site Visit</a>
-  </nav>
+  <nav class="mob" id="mob"><a href="index.html">Home</a><a href="windows-doors.html">Windows and Doors</a><a href="railings.html">Railings</a><a href="partitions.html">Partitions and Doors</a><a href="shower-cubicles.html">Shower Cubicles</a><a href="mirrors.html">Mirrors</a><a href="projects.html">Projects</a><a href="about.html">About Us</a><a href="architects.html">Architects</a><a href="contact.html">Contact</a><a href="contact.html" class="mob-cta">Book a Site Visit</a></nav>
 </header>
 
 <section class="ph">
-  <div class="wrap ph-inner">
-    <div class="ph-left">
-      <span class="eyebrow-w rev">Solutions</span>
-      <h1 class="rev d1">Open Spaces.<br/>Better Views.<br/><em>Greater Comfort.</em></h1>
-      <p class="rev d2">Windows and doors are more than openings. They control light, airflow, acoustics, energy efficiency, and the overall experience of a space.</p>
-      <a href="contact.html" class="btn btn-teal rev d3">Discuss Your Requirements</a>
-      <div class="apps-box rev d4">
-        <h3>Ideal For</h3>
-        <div class="apps"><span class="app-tag">Villas</span><span class="app-tag">Apartments</span><span class="app-tag">Offices</span><span class="app-tag">Retail</span></div>
-      </div>
-    </div>
-    <div class="ph-img rev d2">
-      <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/IMG_0153.jpg" alt="Windows and Doors" loading="eager"/>
-      <div class="ph-teal"></div>
-    </div>
+  <div class="wrap phi">
+    <span class="eyebrow-w rev">About Us</span>
+    <h1 class="rev d1">Building Better<br/>Spaces Through <em>Glass</em></h1>
+    <p class="rev d2">Domestic Glass has been helping homeowners, architects, interior designers, and businesses realise their vision through thoughtfully engineered glass solutions since 1991.</p>
   </div>
 </section>
 
-<section class="challenges">
+<section class="ai">
   <div class="wrap">
-    <span class="teal-bar rev"></span>
-    <span class="eyebrow-g rev">Challenges We Solve</span>
-    <h2 class="rev d1">Common problems. Precision solutions.</h2>
-    <div class="cg">
-      <div class="ci rev d1"><h3>Excessive Heat and Noise</h3><p>Advanced glazing that improves indoor comfort and reduces heat gain significantly.</p></div>
-      <div class="ci rev d2"><h3>Poor Natural Lighting</h3><p>Maximise daylight while maintaining thermal performance with the right glazing system.</p></div>
-      <div class="ci rev d3"><h3>Bulky Frames</h3><p>Slim-profile systems that enhance views and complement contemporary architecture.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="benefits">
-  <div class="wrap">
-    <div class="bg2">
+    <div class="ai-g">
       <div class="rev">
         <span class="teal-bar"></span>
-        <span class="eyebrow-g">Benefits</span>
-        <h2>What you gain</h2>
-        <div class="bis"><div class="bi"><div class="bdot"></div><span>Better Natural Light</span></div><div class="bi"><div class="bdot"></div><span>Improved Ventilation</span></div><div class="bi"><div class="bdot"></div><span>Sound Reduction</span></div><div class="bi"><div class="bdot"></div><span>Enhanced Energy Efficiency</span></div><div class="bi"><div class="bdot"></div><span>Contemporary Aesthetics</span></div></div>
-        <a href="contact.html" class="btn btn-blk" style="margin-top:32px;">Discuss Your Requirements</a>
+        <span class="eyebrow-g">Our Story</span>
+        <h2>Founded in 1991. Still building every day.</h2>
+        <p>We combine craftsmanship, technology, and execution expertise to deliver projects that are visually stunning and built to last. From a single fabrication unit to a full-service glass solutions company, our growth has been driven by the trust our clients place in us.</p>
+        <p>Today, Domestic Glass operates with an in-house fabrication facility, dedicated project management teams, and precision installation specialists, all working together to deliver seamless glass solutions across India.</p>
+        <a href="contact.html" class="btn btn-blk" style="margin-top:28px;">Start Your Project</a>
       </div>
-      <div class="bimg rev d2">
-        <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/IMG_0202.jpg" alt="Project Outcome" loading="lazy"/>
+      <div class="ai-img rev d2">
+        <img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/DG_aboutus.jpeg" alt="The Domestic Glass Team" loading="eager" onerror="this.src='DG_aboutus.jpeg'"/>
+        <div class="ai-img-cap"><span>The Domestic Glass Team</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="scta">
-  <div class="wrap scta-i">
-    <div class="rev">
-      <h2>Discuss Your Requirements</h2>
-      <p>Our team is ready to assess your space and recommend the right solution.</p>
+<section class="approach">
+  <div class="wrap">
+    <span class="teal-bar rev"></span>
+    <span class="eyebrow-g rev">Our Approach</span>
+    <h2 class="rev d1">How we work with you</h2>
+    <div class="steps">
+      <div class="step rev d1"><div class="sn">01</div><h3>Understand</h3><p>We begin by understanding how the space will be used, its function, aesthetics, and the people who will occupy it.</p></div>
+      <div class="step rev d2"><div class="sn">02</div><h3>Design</h3><p>We recommend the right systems, hardware, and finishes, balancing beauty, safety, and long-term performance.</p></div>
+      <div class="step rev d3"><div class="sn">03</div><h3>Fabricate</h3><p>Precision manufacturing at our own facility, tailored exactly to project requirements and specifications.</p></div>
+      <div class="step rev d4"><div class="sn">04</div><h3>Execute</h3><p>Professional installation with attention to every detail. On time, on specification, with minimal disruption.</p></div>
     </div>
-    <a href="contact.html" class="btn-ws rev d2">Get in Touch <svg width="12" height="12" fill="none" viewBox="0 0 12 12"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="wrap">
+    <div class="promise-i">
+      <div class="promise-left rev">
+        <span class="teal-bar"></span>
+        <span class="eyebrow-w">Our Promise</span>
+        <h2 style="color:#ffffff;">What you can always expect from us</h2>
+        <p style="color:rgba(255,255,255,.55);">Every project, regardless of size, receives the same commitment to quality, communication, and craft.</p>
+      </div>
+      <div class="pis">
+        <div class="pi"><div class="pidot"></div><div class="pi-text"><strong>Quality Materials</strong><span>No compromise on what goes into your space</span></div></div>
+        <div class="pi"><div class="pidot"></div><div class="pi-text"><strong>Transparent Communication</strong><span>You always know where things stand</span></div></div>
+        <div class="pi"><div class="pidot"></div><div class="pi-text"><strong>Timely Delivery</strong><span>We respect your schedules and deadlines</span></div></div>
+        <div class="pi"><div class="pidot"></div><div class="pi-text"><strong>Seamless Execution</strong><span>From site survey to final installation</span></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer id="ft">
   <div class="wrap">
     <div class="ftg">
-      <div>
-        <img class="fli" src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/>
-        <p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p>
-      </div>
+      <div><img class="fli" src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/Domestic_glass_Logo__1_.png" alt="Domestic Glass" onerror="this.style.display='none'"/><p class="ftag">Designing, fabricating, and installing custom glass solutions across India since 1991.</p></div>
       <div class="fc"><h4>Solutions</h4><ul><li><a href="windows-doors.html">Windows and Doors</a></li><li><a href="railings.html">Railings</a></li><li><a href="partitions.html">Partitions and Doors</a></li><li><a href="shower-cubicles.html">Shower Cubicles</a></li><li><a href="mirrors.html">Mirrors</a></li></ul></div>
       <div class="fc"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="architects.html">Architects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div class="fc"><h4>Contact</h4><div class="fci"><a href="tel:+919999999999" class="fca">+91 98765 43210</a><a href="mailto:info@domesticglass.in" class="fca">info@domesticglass.in</a><span class="fca" style="cursor:default;">Hyderabad, Telangana</span></div></div>
@@ -207,10 +178,8 @@ html{scroll-behavior:smooth;}body{font-family:var(--fb);font-size:16px;line-heig
   </div>
 </footer>
 <script>
-const hdr=document.getElementById('hdr');
-window.addEventListener('scroll',()=>hdr.classList.toggle('sc',window.scrollY>20));
-const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');
-hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mob.classList.toggle('op');});
+const hdr=document.getElementById('hdr');window.addEventListener('scroll',()=>hdr.classList.toggle('sc',window.scrollY>20));
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mob');hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mob.classList.toggle('op');});
 const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.rev').forEach(el=>ro.observe(el));
 document.querySelectorAll('.ph .rev').forEach(el=>el.classList.add('on'));

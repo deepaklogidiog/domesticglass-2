@@ -38,18 +38,11 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 .mob a:last-child{border-bottom:none;}.mob a:hover{color:var(--teal);}
 .mob-cta{margin-top:16px;background:var(--black);color:var(--white)!important;text-align:center;padding:13px!important;border-bottom:none!important;font-weight:600;font-size:11px!important;text-transform:uppercase;letter-spacing:.08em;}
 
-/* PAGE HERO */
-.ph{padding:148px 0 80px;background:var(--black);position:relative;overflow:hidden;}
-.ph::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:28px 28px;}
-.ph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--teal);}
-.phi{position:relative;z-index:1;}
-.ph h1{font-family:var(--fm);font-size:clamp(36px,5vw,64px);font-weight:300;line-height:1.1;color:var(--white);margin:18px 0 16px;letter-spacing:-.01em;}
-.ph h1 em{font-style:normal;font-weight:600;color:var(--teal);}
-.ph p{font-size:15px;line-height:1.75;color:rgba(255,255,255,.5);max-width:520px;}
+
 
 /* ===== INFINITE MARQUEE STRIPS ===== */
 /* Two rows running in opposite directions, tight, no gaps */
-.marquee-gallery{background:var(--white);padding:48px 0 0;overflow:hidden;}
+.marquee-gallery{background:var(--white);padding-top:100px;overflow:hidden;}
 .mg-row{display:flex;gap:0;overflow:hidden;margin-bottom:3px;}
 .mg-row:last-child{margin-bottom:0;}
 .mg-track{display:flex;gap:3px;animation:mgLeft 40s linear infinite;width:max-content;flex-shrink:0;}
@@ -74,9 +67,11 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 
 /* Masonry-style grid: 4 cols, items fill naturally */
 .gal-grid{
-  columns:4;column-gap:3px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:3px;
 }
-.gi{break-inside:avoid;margin-bottom:3px;position:relative;overflow:hidden;cursor:pointer;display:block;}
+.gi{position:relative;overflow:hidden;cursor:pointer;display:block;aspect-ratio:1;}
 .gi img{width:100%;display:block;transition:transform .5s ease;}
 .gi:hover img{transform:scale(1.04);}
 .gi-ov{position:absolute;inset:0;background:rgba(10,10,10,0);transition:background .3s;}
@@ -113,9 +108,9 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
 .fbl{display:flex;gap:18px;}.fbl a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s;}.fbl a:hover{color:var(--teal);}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.gal-grid{columns:3;}.ftg{grid-template-columns:1fr 1fr;}}
-@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.gal-grid{columns:2;}.mg-img{height:160px;}}
-@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.gal-grid{columns:2;}.mg-img{height:120px;}.gal-tabs{overflow-x:auto;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}}
+@media(max-width:1024px){.gal-grid{grid-template-columns:repeat(3,1fr);}.ftg{grid-template-columns:1fr 1fr;}}
+@media(max-width:900px){.nl,.nr .btn-blk{display:none;}.hbg{display:flex;}.wrap,.nav{padding-left:24px;padding-right:24px;}.gal-grid{grid-template-columns:repeat(3,1fr);}.mg-img{height:160px;}}
+@media(max-width:640px){.wrap,.nav{padding-left:18px;padding-right:18px;}.gal-grid{grid-template-columns:repeat(2,1fr);}.mg-img{height:120px;}.gal-tabs{overflow-x:auto;}.ftg{grid-template-columns:1fr;}.fbb{flex-direction:column;align-items:flex-start;}}
 </style>
 </head>
 <body>
@@ -165,13 +160,7 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
   </nav>
 </header>
 
-<section class="ph">
-  <div class="wrap phi">
-    <span class="eyebrow-w rev">Product Gallery</span>
-    <h1 class="rev d1">Our <em>Glass</em> in the Wild</h1>
-    <p class="rev d2">Every image below is a real project delivered by Domestic Glass. Filter by product type to explore our range.</p>
-  </div>
-</section>
+
 
 <!-- INFINITE MARQUEE: top showcase strip -->
 <div class="marquee-gallery">
@@ -245,17 +234,17 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
       <!-- Sliding subs -->
       <div class="gsubs" id="ss-sliding">
         <button class="gs on" onclick="gsub(this,'all-s')">All Sliding</button>
-        <button class="gs" onclick="gsub(this,'s3')">3+0 Sliding</button>
-        <button class="gs" onclick="gsub(this,'syn')">Synchro Sliding</button>
+        <button class="gs" onclick="gsub(this,'s3')">Standard Sliding</button>
+        <button class="gs" onclick="gsub(this,'syn')">Synchronised Sliding</button>
       </div>
       <!-- Doors subs -->
       <div class="gsubs" id="ss-doors">
         <button class="gs on" onclick="gsub(this,'all-d')">All Doors</button>
-        <button class="gs" onclick="gsub(this,'back')">Back Door</button>
-        <button class="gs" onclick="gsub(this,'inv')">Invisible Door</button>
-        <button class="gs" onclick="gsub(this,'main')">Main Door</button>
-        <button class="gs" onclick="gsub(this,'tech')">Techno Door</button>
-        <button class="gs" onclick="gsub(this,'rail')">Technorail Door</button>
+        <button class="gs" onclick="gsub(this,'back')">Hinged Back Door</button>
+        <button class="gs" onclick="gsub(this,'inv')">Concealed Door</button>
+        <button class="gs" onclick="gsub(this,'main')">Main Entrance Door</button>
+        <button class="gs" onclick="gsub(this,'tech')">TechnAL Door</button>
+        <button class="gs" onclick="gsub(this,'rail')">TechnoRail Door</button>
       </div>
       <!-- Windows subs -->
       <div class="gsubs" id="ss-windows">
@@ -264,8 +253,8 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
         <button class="gs" onclick="gsub(this,'gal')">Galene GTi</button>
         <button class="gs" onclick="gsub(this,'louv')">Louver</button>
         <button class="gs" onclick="gsub(this,'lum')">Lumeal GAn</button>
-        <button class="gs" onclick="gsub(this,'tgp')">Topaze Gb+</button>
-        <button class="gs" onclick="gsub(this,'tg24')">Topaze Gb 24</button>
+        <button class="gs" onclick="gsub(this,'tgp')">Topaze GB+</button>
+        <button class="gs" onclick="gsub(this,'tg24')">Topaze GB24</button>
       </div>
     </div>
 
@@ -276,7 +265,7 @@ img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/SlidingDoor003.jpg" alt="Sliding Door" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>Sliding Door 003</span></div></div>
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/SlidingDoor004.jpg" alt="Sliding Door" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>Sliding Door 004</span></div></div>
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/SlidingDoor005.jpg" alt="Sliding Door" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>Sliding Door 005</span></div></div>
-      <div class="gi" data-c="sliding" data-s="all-s syn"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/SynchroSliding_5216.jpg" alt="Synchro Sliding" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>Synchro Sliding</span></div></div>
+      <div class="gi" data-c="sliding" data-s="all-s syn"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/SynchroSliding_5216.jpg" alt="Synchro Sliding" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>Synchronised Sliding</span></div></div>
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/NewSliding_0029.jpg" alt="New Sliding" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>New Sliding 0029</span></div></div>
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/NewSliding_0030.jpg" alt="New Sliding" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>New Sliding 0030</span></div></div>
       <div class="gi" data-c="sliding" data-s="all-s s3"><img src="https://raw.githubusercontent.com/deepaklogidiog/domesticglass-2/main/NewSliding_0031.jpg" alt="New Sliding" loading="lazy"/><div class="gi-ov"></div><div class="gi-lb"><span>New Sliding 0031</span></div></div>
